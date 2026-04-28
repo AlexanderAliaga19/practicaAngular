@@ -1,0 +1,56 @@
+<mat-card class="resource-card" role="article" [attr.aria-label]="resource().description">
+  <img
+    mat-card-image
+    class="resource-logo"
+    [alt]="'Logo for ' + resource().description"
+    [src]="resource().urlToLogo"/>
+
+  <mat-card-header>
+    <mat-card-title>{{ resource().description }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      <strong>{{ 'coding.types' | translate }}:</strong>
+      {{ resource().types.join(', ') }}
+    </p>
+
+    <p>
+      <strong>{{ 'coding.topics' | translate }}:</strong>
+      {{ resource().topics.join(', ') }}
+    </p>
+
+    <p>
+      <strong>{{ 'coding.levels' | translate }}:</strong>
+      {{ resource().levels.join(', ') }}
+    </p>
+
+    <p>
+      <strong>{{ 'coding.website' | translate }}:</strong>
+      {{ resource().url }}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions class="actions-section">
+    <a
+      [href]="resource().url"
+      class="action-button"
+      color="primary"
+      mat-button
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Go to resource website">
+      {{ 'coding.goToWebsite' | translate }}
+    </a>
+
+    <span class="default-spacer"></span>
+
+    <button
+      (click)="shareResource()"
+      aria-label="Share Resource"
+      color="primary"
+      mat-icon-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

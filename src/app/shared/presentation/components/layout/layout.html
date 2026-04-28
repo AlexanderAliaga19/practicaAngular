@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="toolbar" role="banner" aria-label="Application toolbar">
+  <div class="brand">
+    <img
+      src="images/women-who-code-logo.png"
+      alt="Women Who Code logo"
+      class="brand-logo">
+
+    <span>{{ 'app.title' | translate }}</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <app-language-switcher/>
+</mat-toolbar>
+
+<main class="main-content" role="main">
+  <app-coding-resource-list
+    [resources]="codingResources()"
+    [loading]="loading()"
+    [error]="error()"/>
+</main>
+
+<app-footer/>

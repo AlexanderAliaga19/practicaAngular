@@ -1,0 +1,17 @@
+<section class="catalogue-section" aria-labelledby="catalogue-title">
+  <h1 id="catalogue-title">{{ 'coding.catalogueTitle' | translate }}</h1>
+
+  @if (loading()) {
+    <p class="status-message" aria-live="polite">Loading coding resources...</p>
+  }
+
+  @if (error()) {
+    <p class="status-message error-message" role="alert">{{ error() }}</p>
+  }
+
+  <div class="resources-grid" aria-label="Coding resources catalogue">
+    @for (resource of resources(); track resource.id) {
+      <app-coding-resource-item [resource]="resource"/>
+    }
+  </div>
+</section>

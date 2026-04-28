@@ -1,0 +1,23 @@
+.catalogue-section {
+  padding: 32px 24px;
+}
+
+.catalogue-section h1 {
+  margin: 0 0 24px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.status-message {
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: #b00020;
+}
