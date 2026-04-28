@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Women Who Code"
+  },
+  "coding": {
+    "catalogueTitle": "Coding Resources Catalogue",
+    "types": "Types",
+    "topics": "Topics",
+    "levels": "Levels",
+    "website": "Website",
+    "goToWebsite": "Go To Website",
+    "shareResource": "Share Resource"
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Women Who Code. All rights reserved.",
+    "developedBy": "Developed by"
+  }
+}
